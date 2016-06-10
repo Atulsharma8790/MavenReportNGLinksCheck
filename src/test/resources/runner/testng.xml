@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+	    <listener class-name="Listeners.customListeners" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Welcome Test" allow-return-values="true">
+		<classes>
+			<class name="Project.WelcomeSite" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="Login into Site Test" allow-return-values="true">
+		<classes>
+			<class name="Project.doLogin" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
